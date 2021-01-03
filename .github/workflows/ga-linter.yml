@@ -1,12 +1,13 @@
-
-name: Linter
-
-on:
-  - push
-jobs:
-  linter:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run linter
-        run: |
-          make lint
+name: linter 
+  on: push: 
+    branches: 
+      - '**' 
+      jobs: 
+        build: 
+          runs-on: 
+            ubuntu-latest 
+            steps: 
+              - uses: actions/checkout@v2 
+              - uses: actions/setup-node@v1 
+              with: node-version: 14 
+              - run: make lint
