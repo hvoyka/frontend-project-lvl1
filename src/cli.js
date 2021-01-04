@@ -5,4 +5,10 @@ const greeting = () => {
   console.log(`Hello, ${name}!`);
 };
 
-export default greeting;
+const questionEven = (num) => {
+  console.log(`Question: ${num}`);
+  const answer = readlineSync.question('`Your answer: ');
+  return answer;
+};
+
+export { greeting, questionEven };
