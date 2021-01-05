@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { questionEven } from '../src/cli.js';
 
 const even = () => {
@@ -20,5 +22,5 @@ const even = () => {
     }
   }
 };
-
+even();
 export default even;
