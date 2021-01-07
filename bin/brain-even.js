@@ -1,26 +1,26 @@
 #!/usr/bin/env node
 
-import { questionEven } from '../src/cli.js';
+import cli from '../src/cli.js';
 
-const even = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const BrainEven = () => {
+  cli.greeting();
+  cli.evenRules();
   let correctAnswers = 0;
   while (correctAnswers <= 3) {
     const randNum = Math.floor(Math.random() * 100);
-    const answer = questionEven(randNum);
+    const answer = cli.evenQuestion(randNum);
     if ((randNum % 2 === 0 && answer === 'yes') || (randNum % 2 !== 0 && answer === 'no')) {
-      console.log('Correct!');
+      cli.evenCorrect();
       correctAnswers += 1;
       if (correctAnswers === 3) {
-        console.log('Congratulations, Bill!');
+        cli.evenGrats();
         break;
       }
     } else {
-      console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.
-      Let's try again, Bill!`);
+      cli.evenWrong(answer);
       break;
     }
   }
 };
-even();
-export default even;
+BrainEven();
+export default BrainEven;
