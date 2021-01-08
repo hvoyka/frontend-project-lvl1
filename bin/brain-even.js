@@ -9,7 +9,8 @@ const BrainEven = () => {
   while (correctAnswers <= 3) {
     const randNum = Math.floor(Math.random() * 100);
     const answer = cli.evenQuestion(randNum);
-    if ((randNum % 2 === 0 && answer === 'yes') || (randNum % 2 !== 0 && answer === 'no')) {
+    const correct = randNum % 2 === 0 ? 'yes' : 'no';
+    if ((correct === answer) || (correct === answer)) {
       cli.evenCorrect();
       correctAnswers += 1;
       if (correctAnswers === 3) {
@@ -17,7 +18,7 @@ const BrainEven = () => {
         break;
       }
     } else {
-      cli.evenWrong(answer);
+      cli.evenWrong(answer, correct);
       break;
     }
   }

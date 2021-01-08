@@ -10,7 +10,7 @@ const cli = {
   },
   evenQuestion(num) {
     console.log(`Question: ${num}`);
-    const answer = readlineSync.question('`Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
     return answer;
   },
   evenCorrect() {
@@ -19,9 +19,8 @@ const cli = {
   evenGrats() {
     console.log(`Congratulations, ${this.userName}!`);
   },
-  evenWrong(answer) {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'.
-      Let's try again, ${this.userName}!`);
+  evenWrong(answer, correct) {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'. \nLet's try again, ${this.userName}!`);
   },
 };
 
