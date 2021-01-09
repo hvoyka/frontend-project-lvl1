@@ -21,3 +21,11 @@ $ brain-even
 ```
 
 [<img src="https://asciinema.org/a/qdyrrBju0Q9R1sHrFsk686D8O.svg">](https://asciinema.org/a/qdyrrBju0Q9R1sHrFsk686D8O)
+
+
+### Start brain-calc game
+```
+$ brain-calc
+```
+
+[<img src="https://asciinema.org/a/rMpXRi7xGMvv0BrBeXZU1evVI.svg">](https://asciinema.org/a/rMpXRi7xGMvv0BrBeXZU1evVI)

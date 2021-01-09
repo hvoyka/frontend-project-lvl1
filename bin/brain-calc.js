@@ -10,8 +10,8 @@ const BrainCalc = () => {
   while (correctAnswers <= 3) {
     const randNumOne = Math.floor(Math.random() * 25);
     const randNumTwo = Math.floor(Math.random() * 25);
-    const rundomNumForSign = Math.floor(Math.random() * signs.length);
-    const sign = signs[rundomNumForSign];
+    const randNumForSign = Math.floor(Math.random() * signs.length);
+    const sign = signs[randNumForSign];
     const expression = `${randNumOne} ${sign} ${randNumTwo}`;
     const answer = +cli.question(expression);
 
