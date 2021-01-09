@@ -5,21 +5,30 @@ const cli = {
     this.userName = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${this.userName}!`);
   },
-  evenRules() {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  rules(game) {
+    switch (game) {
+      case 'even':
+        console.log('Answer "yes" if the number is even, otherwise answer "no".');
+        break;
+      case 'calc':
+        console.log('What is the result of the expression?');
+        break;
+      default:
+        console.log('Error - for what game rules you need?');
+    }
   },
-  evenQuestion(num) {
-    console.log(`Question: ${num}`);
+  question(expression) {
+    console.log(`Question: ${expression}`);
     const answer = readlineSync.question('Your answer: ');
     return answer;
   },
-  evenCorrect() {
+  correct() {
     console.log('Correct!');
   },
-  evenGrats() {
+  grats() {
     console.log(`Congratulations, ${this.userName}!`);
   },
-  evenWrong(answer, correct) {
+  wrong(answer, correct) {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'. \nLet's try again, ${this.userName}!`);
   },
 };

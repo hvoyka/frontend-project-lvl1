@@ -4,21 +4,21 @@ import cli from '../src/cli.js';
 
 const BrainEven = () => {
   cli.greeting();
-  cli.evenRules();
+  cli.rules('even');
   let correctAnswers = 0;
   while (correctAnswers <= 3) {
     const randNum = Math.floor(Math.random() * 100);
-    const answer = cli.evenQuestion(randNum);
+    const answer = cli.question(randNum);
     const correct = randNum % 2 === 0 ? 'yes' : 'no';
     if ((correct === answer) || (correct === answer)) {
-      cli.evenCorrect();
+      cli.correct();
       correctAnswers += 1;
       if (correctAnswers === 3) {
-        cli.evenGrats();
+        cli.grats();
         break;
       }
     } else {
-      cli.evenWrong(answer, correct);
+      cli.wrong(answer, correct);
       break;
     }
   }
