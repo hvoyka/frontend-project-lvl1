@@ -4,13 +4,13 @@ import cli from '../src/cli.js';
 
 const BrainCalc = () => {
   cli.greeting();
-  cli.rules('even');
+  cli.rules('calc');
   let correctAnswers = 0;
   const signs = ['+', '-', '*'];
   while (correctAnswers <= 3) {
     const randNumOne = Math.floor(Math.random() * 25);
     const randNumTwo = Math.floor(Math.random() * 25);
-    const rundomNumForSign = Math.floor(Math.random() * 3);
+    const rundomNumForSign = Math.floor(Math.random() * signs.length);
     const sign = signs[rundomNumForSign];
     const expression = `${randNumOne} ${sign} ${randNumTwo}`;
     const answer = +cli.question(expression);
